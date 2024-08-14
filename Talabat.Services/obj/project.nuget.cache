@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jln5KqhtgC9wUBs571DQmbCKjJG+/i/tzIRXzg+4wVlcuZmjk5ctXxtCRWBfzl9KIgpNaHgueAnOWYwJl12RBQ==",
+  "dgSpecHash": "s20dBi4Kk3vXlN4nifLaoUisckHpO9ptqKUg05M3VqLyfK2QF4os/WjkhJKvT8eekGK06b403mbKeFErlHGEAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\Talabat.Services.csproj",
+  "projectFilePath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\Talabat.Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

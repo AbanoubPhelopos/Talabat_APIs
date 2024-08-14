@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Core\\Talabat.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Core\\Talabat.Core.csproj",
       "projectName": "Talabat.Core",
-      "projectPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Core\\Talabat.Core.csproj",
+      "projectPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Core\\Talabat.Core.csproj",
       "packagesPath": "C:\\Users\\Abanoub\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Core\\obj\\",
+      "outputPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Abanoub\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

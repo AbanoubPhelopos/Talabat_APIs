@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\Talabat.Services.csproj": {}
+    "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\Talabat.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\Talabat.Services.csproj": {
+    "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\Talabat.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\Talabat.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\Talabat.Services.csproj",
         "projectName": "Talabat.Services",
-        "projectPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\Talabat.Services.csproj",
+        "projectPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\Talabat.Services.csproj",
         "packagesPath": "C:\\Users\\Abanoub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat.APIs\\Talabat.Services\\obj\\",
+        "outputPath": "C:\\Users\\Abanoub\\RiderProjects\\Talabat\\Talabat.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abanoub\\AppData\\Roaming\\NuGet\\NuGet.Config"
