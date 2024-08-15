@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Talabat.Core.Repository.Contract;
+using Talabat.Repository;
 using Talabat.Repository.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefualtConnection")));
+
+//to make it more generic with any class implement IGenericRepository
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
 
