@@ -12,6 +12,20 @@ public class ProductController : BaseApiController
     {
         _productRepo = productRepo;
     }
-    
-    
+
+    public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+    {
+        var products =await _productRepo.GetAll();
+        
+        return Ok(products);
+    }
+    [HttpGet("{Id}")]
+    public async Task<ActionResult<Product>> GetProduct(int Id)
+    {
+        var product = await _productRepo.Get(Id);
+        if (product is null)
+            return NotFound(new { Messege = "Not Found", StatusCode = 404 });
+        
+        return Ok(product);
+    }
 }
