@@ -12,7 +12,7 @@ public class ProductController : BaseApiController
     {
         _productRepo = productRepo;
     }
-
+    [HttpGet()]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         var products =await _productRepo.GetAll();
