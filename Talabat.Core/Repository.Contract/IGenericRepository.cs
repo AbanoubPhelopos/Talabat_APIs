@@ -1,9 +1,13 @@
 ﻿using Talabat.Core.Entities;
+using Talabat.Core.Spacefications;
 
 namespace Talabat.Core.Repository.Contract;
 
 public interface IGenericRepository<T> where T : BaseEntity
 {
-    Task<T?> Get(int Id);
-    Task<IEnumerable<T>> GetAll();
+    Task<T?> GetAsync(int Id);
+    Task<IEnumerable<T>> GetAllAsync();
+    
+    Task<T?> GetWirhSpec(ISpacefications<T> spec);
+    Task<IEnumerable<T>> GetAllWithSpecAsync(ISpacefications<T> spec);
 }

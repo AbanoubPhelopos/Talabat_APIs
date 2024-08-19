@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Talabat.Core.Entities;
 using Talabat.Core.Repository.Contract;
+using Talabat.Core.Spacefications;
 using Talabat.Repository.Data;
 
 namespace Talabat.Repository;
@@ -8,27 +9,24 @@ namespace Talabat.Repository;
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
     private readonly StoreContext _dbContext;
-
-    public GenericRepository(StoreContext _dbContext)
+    public GenericRepository(StoreContext dbContext)
     {
-        this._dbContext = _dbContext;
-    }
-    public async Task<T?> Get(int Id)
-    {
-        if (typeof(T) == typeof(Product))
-            return await _dbContext.Set<Product>().Where(p => p.Id == Id)
-                .Include(p => p.Brand)
-                .Include(p => p.Category)
-                .FirstOrDefaultAsync() as T;
-        return await _dbContext.Set<T>().FindAsync(Id);
+        _dbContext = dbContext;
     }
 
-    public async Task<IEnumerable<T>> GetAll()
-    {
-        if (typeof(T) == typeof(Product))
-            return (IEnumerable<T>)await _dbContext.Set<Product>().Include(p => p.Brand)
-                .Include(p => p.Category)
-                .ToListAsync();
-        return await _dbContext.Set<T>().ToListAsync();
-    }
+    public async Task<T?> GetAsync(int Id)
+        => await _dbContext.Set<T>().FindAsync(Id);
+
+    public async Task<IEnumerable<T>> GetAllAsync()
+        => await _dbContext.Set<T>().ToListAsync();
+
+
+    public async Task<IEnumerable<T>> GetAllWithSpecAsync(ISpacefications<T> spec)
+        => await ApplySpecification(spec).AsNoTracking().ToListAsync();
+
+    public async Task<T?> GetWirhSpec(ISpacefications<T> spec)
+        => await ApplySpecification(spec).FirstOrDefaultAsync();
+
+    private IQueryable<T> ApplySpecification(ISpacefications<T> spec)
+        => SpaceficationsEvaluator<T>.GetQuery(_dbContext.Set<T>(), spec);
 }
