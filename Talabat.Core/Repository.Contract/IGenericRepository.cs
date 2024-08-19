@@ -8,6 +8,6 @@ public interface IGenericRepository<T> where T : BaseEntity
     Task<T?> GetAsync(int Id);
     Task<IEnumerable<T>> GetAllAsync();
     
-    Task<T?> GetWirhSpec(ISpacefications<T> spec);
+    Task<T?> GetWirhSpecAsync(ISpacefications<T> spec);
     Task<IEnumerable<T>> GetAllWithSpecAsync(ISpacefications<T> spec);
 }

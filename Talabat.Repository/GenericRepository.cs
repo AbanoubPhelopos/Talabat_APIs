@@ -24,7 +24,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     public async Task<IEnumerable<T>> GetAllWithSpecAsync(ISpacefications<T> spec)
         => await ApplySpecification(spec).AsNoTracking().ToListAsync();
 
-    public async Task<T?> GetWirhSpec(ISpacefications<T> spec)
+    public async Task<T?> GetWirhSpecAsync(ISpacefications<T> spec)
         => await ApplySpecification(spec).FirstOrDefaultAsync();
 
     private IQueryable<T> ApplySpecification(ISpacefications<T> spec)
