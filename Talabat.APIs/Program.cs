@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Talabat.APIs.Helpers;
 using Talabat.Core.Repository.Contract;
 using Talabat.Repository;
 using Talabat.Repository.Data;
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<StoreContext>(options =>
 
 //to make it more generic with any class implement IGenericRepository
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 var app = builder.Build();
 
