@@ -24,7 +24,7 @@ public class ProductController : BaseApiController
     [HttpGet("{Id}")]
     public async Task<ActionResult<Product>> GetProduct(int Id)
     {
-        ProductWithBrandAndCategorySpacifications spec = new(p => p.Id == Id);
+        ProductWithBrandAndCategorySpacifications spec = new(Id);
 
         var product = await _productRepo.GetWirhSpecAsync(spec);
         if (product is null)

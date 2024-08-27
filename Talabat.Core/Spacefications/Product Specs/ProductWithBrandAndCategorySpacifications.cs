@@ -10,7 +10,7 @@ public class ProductWithBrandAndCategorySpacifications : BaseSpacefications<Prod
         ApplyProductSpecs();
     }
     
-    public ProductWithBrandAndCategorySpacifications(Expression<Func<Product, bool>> criteriaSpec) : base(criteriaSpec)
+    public ProductWithBrandAndCategorySpacifications(int id) : base(P=>P.Id==id)
     {
         ApplyProductSpecs();
     }
